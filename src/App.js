@@ -1,6 +1,6 @@
 import AppHeader from "./pages/AppHeader";
 import AppBody from "./pages/AppBody";
-import AppFooter from "./AppFooter";
+import AppFooter from "./pages/AppFooter";
 
 //user define tag 
 
