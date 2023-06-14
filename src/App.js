@@ -18,7 +18,16 @@ function App() {
 function AppHeader(){
   return(
     <>
-    <h1>Header</h1>
+    {/* <h1 className="bg-dark text-align-center">Header</h1> */}
+
+    <div className="row d-flex bg-success text-light p-3 fs-3">
+      <div className="col">
+        <div className="col">Home</div>
+        <div className="col">Project</div>
+        <div className="col">AboutUs</div>
+
+      </div>
+    </div>
   </>
   );
 }
@@ -28,7 +37,9 @@ function AppHeader(){
 function AppBody(){
   return(
     <>
-    <h1>AppBody</h1>
+    <div className="alert alert-success fs-3">
+      lorem
+    </div>
   </>
   );
 }
