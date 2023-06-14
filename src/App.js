@@ -13,12 +13,17 @@ function App() {
 }
 
 function CounterApp(){
+// data variable :: stateless/statefull
+let counter = 1;// stateless data
+
   // member function 
   let likeMeAction = () => {
-    console.log("I m button click");
+    counter = counter +1;
+    console.log("I m button click",counter);
   }
   return(
     <>
+    <h1>counter</h1>
     <input type="button" value="Like me" onClick={likeMeAction}/>
     </>
   );
