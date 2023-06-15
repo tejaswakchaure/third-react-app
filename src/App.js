@@ -7,30 +7,30 @@ import { useState } from "react";
 function App() {
   return (
     <>
-    <h1>Counter App</h1>
-    <CounterApp/>
+      <h1>Counter App</h1>
+      <CounterApp />
     </>
   );
 
 }
 
-function CounterApp(){
-// data variable :: stateless/statefull
-//let counter = 1;// stateless data
+function CounterApp() {
+  // data variable :: stateless/statefull
+  //let counter = 1;// stateless data
 
-let[counter,setCounter] = useState(1);
+  let [counter, setCounter] = useState(1);
 
   // member function 
   let likeMeAction = () => {
-    counter = counter +1;
-    console.log("I m button click",counter);
+    counter = counter + 1;
+    console.log("I m button click", counter);
     setCounter(counter);
   }
-  return(
+  return (
     <>
-    <h1>{counter}</h1>
-    
-    <input  type="button" value="Like me" onClick={likeMeAction}/>
+      <h1>{counter}</h1>
+
+      <input type="button" value="Like me" onClick={likeMeAction} />
     </>
   );
 }
