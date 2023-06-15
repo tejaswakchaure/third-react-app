@@ -4,41 +4,80 @@ function App() {
   return (
     <>
       <h1>Counter App</h1>
-      <CounterApp />
-      <CounterApp />
-      <CounterApp />
-      <CounterApp />
+      <StringDemo />
+
     </>
   );
 }
 
-function CounterApp() {
-  // let counter = 100; // stateless ==>does not store value long time
-  let [counter, setCounter] = useState(100); // stateful + DOM Opr
+function StringDemo() {
+  
+  let [title, setTitle] = useState("Tejas Wakchaure"); // stateful + DOM Opr
 
-  let likeMeAction = () => {
-    counter = counter + 1;
-    console.log(counter);
+  let LowerCase = () => {
+    title = title.toLowerCase();
+    console.log(title);
+    setTitle(title);
+  };
 
-    // Asking react to perform dom opr
-    // how to trigger the DOM Opr
-    setCounter(counter);
+  let UpperCase = () => {
+    title = title.toUpperCase();
+    console.log(title);
+    setTitle(title);
   };
 
   return (
     <>
+
       <h5>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
-        commodi reiciendis ullam aliquam facilis perferendis accusamus
-        voluptatum eligendi, eaque voluptatem corrupti, dicta nesciunt voluptas.
-        Cumque quod dolorem cupiditate quidem corrupti!
-      </h5>
-      <h5>
-        {counter}{" "}
-        <input type="button" value="&#128077;" onClick={likeMeAction} />
+        {title}{" "}
+        <input type="button" value="UPPER CASE" onClick={UpperCase} />
+        <input type="button" value="lower case" onClick={LowerCase} />
       </h5>
     </>
   );
 }
 
 export default App;
+
+
+
+// import { useState } from "react";
+// function App() {
+//   return(
+//     <>
+//     <h1>String</h1>
+//     <StringDemo/>
+//     </>
+//   );
+// }
+
+
+// function StringDemo() {
+// let [title, setTitle] = useState("Srushti Bidgar");
+
+// let lowerCase = () => {
+//   title = title.toLowerCase();
+//   console.log(title);
+
+//   setTitle(title);
+// };
+// let upperCase = () => {
+//   title = title.toUpperCase();
+//   console.log(title);
+
+//   setTitle(title);
+// };
+
+
+
+//   return (
+//   <>
+//   <h1>{title}</h1>
+//   <input type="button" value="Lower" onclick={lowerCase}/>
+//   <input type="button" value="Upper" onclick={upperCase} />
+//   </>
+//   );
+// }
+
+// export default App;
