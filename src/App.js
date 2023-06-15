@@ -1,38 +1,44 @@
-
-//user define tag 
-
 import { useState } from "react";
-<script src="https://kit.fontawesome.com/94699f4084.js" crossorigin="anonymous"></script>
 
 function App() {
   return (
     <>
       <h1>Counter App</h1>
       <CounterApp />
+      <CounterApp />
+      <CounterApp />
+      <CounterApp />
     </>
   );
-
 }
 
 function CounterApp() {
-  // data variable :: stateless/statefull
-  //let counter = 1;// stateless data
+  // let counter = 100; // stateless ==>does not store value long time
+  let [counter, setCounter] = useState(100); // stateful + DOM Opr
 
-  let [counter, setCounter] = useState(1);
-
-  // member function 
   let likeMeAction = () => {
     counter = counter + 1;
-    console.log("I m button click", counter);
+    console.log(counter);
+
+    // Asking react to perform dom opr
+    // how to trigger the DOM Opr
     setCounter(counter);
-  }
+  };
+
   return (
     <>
-      <h1>{counter}</h1>
-
-      <input type="button" value="Like me" onClick={likeMeAction} />
+      <h5>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
+        commodi reiciendis ullam aliquam facilis perferendis accusamus
+        voluptatum eligendi, eaque voluptatem corrupti, dicta nesciunt voluptas.
+        Cumque quod dolorem cupiditate quidem corrupti!
+      </h5>
+      <h5>
+        {counter}{" "}
+        <input type="button" value="&#128077;" onClick={likeMeAction} />
+      </h5>
     </>
   );
 }
-export default App;
 
+export default App;
